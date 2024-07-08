@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="search-container">
+        <div class="dropdown">
+            <button class="dropbtn">Everything</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="setCategory('Everything')">Everything</a>
+                <a href="#" onclick="setCategory('Software Development')">Software Development</a>
+                <a href="#" onclick="setCategory('Web Development')">Web Development</a>
+                <a href="#" onclick="setCategory('Data Analyst')">Data Analyst</a>
+                <a href="#" onclick="setCategory('IT Consultant')">IT Consultant</a>
+                <a href="#" onclick="setCategory('Network Administrator')">Network Administrator</a>
+            </div>
+        </div>
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+    </div>
+    <script>
+        function setCategory(category) {
+            document.querySelector('.dropbtn').innerText = category;
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="search-container">
+        <div class="dropdown">
+            <button class="dropbtn">Everything</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="setCategory('Everything')">Everything</a>
+                <a href="#" onclick="setCategory('Software Development')">Software Development</a>
+                <a href="#" onclick="setCategory('Web Development')">Web Development</a>
+                <a href="#" onclick="setCategory('Data Analyst')">Data Analyst</a>
+                <a href="#" onclick="setCategory('IT Consultant')">IT Consultant</a>
+                <a href="#" onclick="setCategory('Network Administrator')">Network Administrator</a>
+            </div>
+        </div>
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+    </div>
+    <script>
+        function setCategory(category) {
+            document.querySelector('.dropbtn').innerText = category;
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.search-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+.search-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #2980b9;
+}
+
